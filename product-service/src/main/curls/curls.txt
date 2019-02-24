@@ -1,0 +1,54 @@
+curl -X POST \
+  http://localhost:8081/product \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "id":1,
+    "name" : "Samsung 8",
+    "description" : "Samsung 8 , Amoled Screen Mobile Phone",
+    "quantity" : 12
+}'
+
+curl -X GET \
+  'http://localhost:8081/product?id=1'
+
+curl -X POST \
+  http://localhost:8082/order \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+      "id":1,
+      "userId":2,
+      "productDetail":{
+        "code":1,
+        "name":"Samsung S8",
+        "description":"Amoled Screen, 6 Inch, Smartphone"
+
+      },
+      "quantity":1,
+      "address":"Cyber City, Bangalore, India"
+}'
+
+curl -X GET \
+  'http://localhost:8082/order?id=1'
+
+
+  //Through Proxy
+
+
+  curl -X POST \
+    http://localhost:8000/product-service/product \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -H 'cache-control: no-cache' \
+    -d '{
+      "id":1,
+      "name" : "Samsung 8",
+      "description" : "Samsung 8 , Amoled Screen Mobile Phone",
+      "quantity" : 12
+  }'
+
+  curl -X GET \
+    'http://localhost:8000/product-service/product?id=1'

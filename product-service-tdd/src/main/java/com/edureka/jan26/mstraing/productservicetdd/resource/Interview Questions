@@ -1,0 +1,66 @@
+Interview Questions for Microservices
+
+1. Distributed Concepts
+    What is cloud, why and how the deployments are made, DC, Multi DC
+    CAP Theorem, Load Balacing
+    Communication Protocol
+    DB Concepts
+
+2. Load Balancing
+    Application
+    DB
+    Geo Location
+    Algorithms for Loadbalancing
+    Custom load balancing etc..
+
+3. Caching
+    Inmemory Caching
+    Global Caching
+    Popular Caching techniques
+    How does caching help MS
+
+4. DB
+    Sharding
+    Partioning - Functional Partioning
+    SQL vs No-SQL
+    ACID
+    BASE
+    2PC
+    2.5PC
+    3 PC
+
+    Distributed Transaction ( Very popular) - SAGA design pattern
+    Replication
+
+5. Queues
+    When to queues?
+    Benefits?
+    Realtime use cases
+    Event driven architecture
+    Event sourcing
+
+6. CAP Theorem (Choose two out of three)
+    Required to give justfication for choosing Mongo over HBASE using CAP
+    Cassandra over MySQL.
+
+7. Proxies
+    API Gateways
+    Routers
+    Global Authenticator
+    Reverse Proxy(???)
+8. Security
+    Simple Security(???)
+    OAuth 2.0(???)
+    SSL implemenation (???) - How do I implement SSL , use SSL cert for secure communication.
+
+9. System Design ( E-Comm / B2C company - Amazon/FKart/Uber )
+    Ola and Uber Architecture
+    Twitter
+    Tiny URL
+    Facebook
+    You Tube
+    Netflix
+    Trivago/MMT
+
+
+

@@ -1,0 +1,12 @@
+TDD - Is a way of developing
+    a) Write the test
+    b) Validate the test - fail
+    c) Write some code which will pass the test.
+
+    Iterate a) b) and c)
+
+Mockito - Is a framework using which you inject mock inside a test class.
+    a) Isolate what I want to test.
+    b) Without isolation you would end testing the complete flow, or usecase.
+
+create table ms.product (id integer not null, description varchar(255) not null, name varchar(255), quantity integer, primary key (id))

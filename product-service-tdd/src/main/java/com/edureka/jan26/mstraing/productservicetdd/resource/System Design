@@ -1,0 +1,83 @@
+Vague Question - (Can you) Design Netflix?
+
+
+A) Come up with the requirement after probing interviewer?
+
+    Functional Requirements
+
+    - User "should be" able to upload video( Publisher/ End Users)
+    - User "should be" able to view and share the video.
+    - User "should be" able to recommend.
+    - User "should be" able to rate, like/dislike etc.
+    - User "should be" able to view the number of "views" of the video.
+    - User "should be" able to view the sorted (custom based on recent/popularity etc.) in the home page.
+
+    Non-functional Requirements
+
+    - System should be able to scale upto 1M concurrent user.
+    - System should be reliable with 99999 availablity.
+    - User/System should be able to give near realtime experice/performance.
+    - System should be able to absorb small faults.
+
+    The system design is going to be one or few functional requirements.
+
+B) Do the capacity planning
+    Number of users concurrent/ total
+    Number of videos per minute/hour/days/month/year
+    Bandwidth calculation
+    Rate of growth the data.
+
+
+
+    In Youtube
+        Total number of users = 1.5 Billion ( .2 Billon)
+        Active Use 20 % of total users = 300 M
+
+        View
+           300M * 5 minute video / 24 * 60 * 60 ~ 500 videos / sec
+
+        Storage estimation
+
+           100M * 5 MB = 100TB
+
+C) Talk about multi DC.
+    - Functional Partitioning which means that all video from India will be stored in Mumbai DC.
+    - Geo Routing
+    - ...
+
+D) System API
+
+    uploadVideo(API Key, UserId, Video Title, Video Content, Region, Country)
+
+F) System Design
+    Very verbose and use diagram as much as you can.
+
+G) Domain Modeling
+    Id
+    User
+    Title
+    Byte array video content
+    ..
+    ..
+H) Layered Architecture
+    Repository
+    Service
+    Resources..
+
+
+
+
+5000 request per minutes
+
+each container will get 1000 request per minutes
+
+each containe will 15 request per second.
+
+only one connection is enough for you server at the rate of 10 ms . request.
+
+
+
+
+
+
+
